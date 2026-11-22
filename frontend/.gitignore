@@ -1,0 +1,23 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+dist-ssr/
+
+# 环境变量与本地密钥（含真实 API Key，绝不提交）
+.env
+.env.local
+.env.*.local
+config.local.js
+config.local.*.js
+
+# 日志与系统文件
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
