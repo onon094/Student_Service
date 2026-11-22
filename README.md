@@ -1,12 +1,12 @@
-# 粤教服务 · 后端
+# 粤教服务 · 多智能体留学服务系统
 
-Dify 负责「大脑」（Agent 编排、知识库、意图识别），FastAPI 负责「手脚」（业务规则、SQLite 读写）。
+Dify 负责「大脑」（Agent 编排、知识库、意图识别），FastAPI 负责「手脚」（业务规则、SQLite 读写），React + Vite 负责「界面」（官网 + 三身份工作台）。
 
 ## 1. 目录
 
 ```
-backend/
-├── app/
+.
+├── app/                        # 后端：FastAPI 应用
 │   ├── main.py                 # 组合根：注册路由、异常、CORS、启动建表
 │   ├── shared/                 # 配置、数据库、异常
 │   ├── identity/               # 用户 / 角色
@@ -20,7 +20,15 @@ backend/
 ├── requirements.txt
 ├── .env.example
 ├── AGENTS.md                   # 架构规范
-└── tests/test_architecture.py  # 架构测试
+├── tests/test_architecture.py  # 架构测试
+└── frontend/                   # 前端：液态玻璃官网 + 工作台（React 19 + Vite）
+    ├── src/                    # Site.jsx / panels.jsx / LoginDialog.jsx / config.js
+    ├── public/
+    ├── index.html
+    ├── package.json
+    ├── vite.config.js
+    ├── .env.example            # Dify Key 模板（复制为 .env.local 再填）
+    └── .gitignore
 ```
 
 每个模块内部：
